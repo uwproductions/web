@@ -2,7 +2,6 @@
 
 import Link from "next/link";
 import React, { useEffect } from "react";
-import Button from "./Button";
 import classNames from "classnames";
 
 const Header = () => {
@@ -24,16 +23,54 @@ const Header = () => {
     };
   }, []);
 
+  const activeClass = "text-black font-bold bg-white rounded-full";
+
+  const navLinks = [
+    {
+      name: "Home",
+      href: "/",
+    },
+    {
+      name: "About",
+      href: "/about",
+    },
+    {
+      name: "Contact",
+      href: "/contact",
+    },
+    {
+      name: "Work",
+      href: "/work",
+    },
+  ];
   return (
-    <div className={classNames(['fixed w-full top-0 flex p-5 z-10', {
-      'bg-transparent text-white': !isScrolled,
-      'bg-slate-200/75': isScrolled,
-    }])}>
-      <Link href="/">Home</Link>
-      <Link href="/about">About</Link>
-      <Link href="/contact">Contact</Link>
-      <Link href="/work">Work</Link>
-    </div>
+    <>
+      <div
+        className={classNames([
+          "fixed w-full top-0 flex p-5 z-10 transition gap-10 justify-center",
+          {
+            "bg-transparent text-white": !isScrolled,
+            "bg-slate-200/75": isScrolled,
+          },
+        ])}
+      >
+        {navLinks.map((link) => (
+          <Link
+            key={link.name}
+            href={link.href}
+            className={classNames([
+              "px-5 py-2 rounded-full transform transition hover:scale-105",
+              {
+                [activeClass]: location.pathname === link.href,
+              },
+            ])}
+          >
+            {link.name}
+          </Link>
+        ))}
+      </div>
+      <div>UWProductions</div>
+    </>
   );
 };
 
