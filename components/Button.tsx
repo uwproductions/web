@@ -9,7 +9,7 @@ const Button = ({ variant = "primary", text = "", onClick = () => {} }) => {
       className={classNames({
         "bg-black text-white": variant === "primary",
         "bg-white text-black": variant === "secondary",
-        'rounded-full p-4 font-bold transform transition duration-500 hover:scale-105': true,
+        'rounded-full p-4 font-bold transform transition hover:scale-105': true,
       })}
       onClick={onClick}
     >
