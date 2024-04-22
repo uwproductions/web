@@ -4,7 +4,10 @@ import Link from "next/link";
 import React, { useEffect } from "react";
 import classNames from "classnames";
 
+import { usePathname } from 'next/navigation';
+
 const Header = () => {
+  const location = usePathname()
   const [isScrolled, setIsScrolled] = React.useState(false);
 
   useEffect(() => {
@@ -47,29 +50,31 @@ const Header = () => {
     <>
       <div
         className={classNames([
-          "fixed w-full top-0 flex p-5 z-10 transition gap-10 justify-center",
+          "fixed w-full top-0 p-5 z-10 transition flex-col justify-between items-center",
           {
             "bg-transparent text-white": !isScrolled,
             "bg-slate-200/75": isScrolled,
           },
         ])}
       >
-        {navLinks.map((link) => (
-          <Link
-            key={link.name}
-            href={link.href}
-            className={classNames([
-              "px-5 py-2 rounded-full transform transition hover:scale-105",
-              {
-                [activeClass]: location.pathname === link.href,
-              },
-            ])}
-          >
-            {link.name}
-          </Link>
-        ))}
+        <div className="flex gap-10 justify-center">
+          {navLinks.map((link) => (
+            <Link
+              key={link.name}
+              href={link.href}
+              className={classNames([
+                "px-5 py-2 rounded-full transform transition hover:scale-105",
+                {
+                  [activeClass]: location === link.href,
+                },
+              ])}
+            >
+              {link.name}
+            </Link>
+          ))}
+        </div>
+        {!isScrolled && <div>test</div>}
       </div>
-      <div>UWProductions</div>
     </>
   );
 };
