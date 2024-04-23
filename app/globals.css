@@ -2,6 +2,17 @@
 @tailwind components;
 @tailwind utilities;
 
+/* @layer base {
+  @font-face {
+    font-family: 'Roboto';
+    font-style: normal;
+    font-weight: 400;
+    font-display: swap;
+    src: url('https://fonts.googleapis.com/css2?family=Roboto&display=swap');
+  }
+} */
+
+
 /* :root {
   --foreground-rgb: 0, 0, 0;
   --background-start-rgb: 214, 219, 220;
@@ -31,3 +42,7 @@ body {
     text-wrap: balance;
   }
 } */
+
+.container {
+  max-width: 1140px;
+}

@@ -3,11 +3,13 @@
 import Link from "next/link";
 import React, { useEffect } from "react";
 import classNames from "classnames";
+import { motion } from "framer-motion";
 
-import { usePathname } from 'next/navigation';
+import { usePathname } from "next/navigation";
+import Logo from "./Logo";
 
 const Header = () => {
-  const location = usePathname()
+  const location = usePathname();
   const [isScrolled, setIsScrolled] = React.useState(false);
 
   useEffect(() => {
@@ -46,36 +48,47 @@ const Header = () => {
       href: "/work",
     },
   ];
+
+  const links = (
+    <div className="flex gap-10 justify-center font-bold">
+      {navLinks.map((link) => (
+        <Link
+          key={link.name}
+          href={link.href}
+          className={classNames([
+            "px-5 py-2 rounded-full transform transition hover:scale-105",
+            {
+              [activeClass]: location === link.href,
+            },
+          ])}
+        >
+          {link.name}
+        </Link>
+      ))}
+    </div>
+  );
+
   return (
-    <>
-      <div
-        className={classNames([
-          "fixed w-full top-0 p-5 z-10 transition flex-col justify-between items-center",
-          {
-            "bg-transparent text-white": !isScrolled,
-            "bg-slate-200/75": isScrolled,
-          },
-        ])}
-      >
-        <div className="flex gap-10 justify-center">
-          {navLinks.map((link) => (
-            <Link
-              key={link.name}
-              href={link.href}
-              className={classNames([
-                "px-5 py-2 rounded-full transform transition hover:scale-105",
-                {
-                  [activeClass]: location === link.href,
-                },
-              ])}
-            >
-              {link.name}
-            </Link>
-          ))}
+    <div className="fixed w-full top-0 z-10">
+      {isScrolled ? (
+        <motion.div
+          className="p-3 flex justify-center transition bg-[#FFFFFFC9] text-black"
+          initial={{ y: -100 }}
+          animate={{ y: 0 }}
+          transition={{ type: "spring", duration: 0.1 }}
+        >
+          <div className="flex justify-between items-center container">
+            <Logo variant="primary" />
+            {links}
+          </div>
+        </motion.div>
+      ) : (
+        <div className="p-5 transition flex-col justify-between items-center bg-transparent text-white">
+          {links}
+          <Logo variant="secondary" size="xl" />
         </div>
-        {!isScrolled && <div>test</div>}
-      </div>
-    </>
+      )}
+    </div>
   );
 };
 
