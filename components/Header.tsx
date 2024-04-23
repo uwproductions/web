@@ -36,16 +36,16 @@ const Header = () => {
       href: "/",
     },
     {
+      name: "Our Work",
+      href: "/work",
+    },
+    {
       name: "About",
       href: "/about",
     },
     {
       name: "Contact",
       href: "/contact",
-    },
-    {
-      name: "Work",
-      href: "/work",
     },
   ];
 
