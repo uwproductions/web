@@ -8,6 +8,8 @@ import { motion } from "framer-motion";
 import { usePathname } from "next/navigation";
 import Logo from "./Logo";
 
+const activeClass = "text-white font-bold bg-black rounded-full";
+
 const Header = () => {
   const location = usePathname();
   const [isScrolled, setIsScrolled] = React.useState(false);
@@ -27,8 +29,6 @@ const Header = () => {
       window.removeEventListener("scroll", handleScroll);
     };
   }, []);
-
-  const activeClass = "text-black font-bold bg-white rounded-full";
 
   const navLinks = [
     {
