@@ -30,7 +30,7 @@ const Footer = () => {
         <Link
           key={link.name}
           href={link.href}
-          className={classNames(["text-white text-2xl"])}
+          className={classNames(["text-white text-l md:text-2xl"])}
         >
           {link.name}
         </Link>
@@ -39,7 +39,7 @@ const Footer = () => {
   );
 
   const address = (
-    <div className="flex flex-col gap-2.5 max-w-[70%] md:max-w-full text-white text-2xl font-light">
+    <div className="flex flex-col gap-2.5 max-w-[70%] md:max-w-full text-white text-l md:text-2xl font-light">
       {/* <div className="flex flex-col gap-2.5"> */}
       <p>2/14, Sector L, Aashiyana</p>
       <p>Lucknow</p>
@@ -57,7 +57,7 @@ const Footer = () => {
   );
 
   return (
-    <div className="py-20 px-20 md:px-0 bg-black">
+    <div className="py-20 px-8 md:px-20 md:px-0 bg-black">
       <div
         className="md:flex md:pb-4 pb-8
       lg:justify-center md:justify-evenly lg:gap-16 border-b"
