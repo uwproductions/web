@@ -57,7 +57,7 @@ const Footer = () => {
   );
 
   return (
-    <div className="py-20 px-8 md:px-20 md:px-0 bg-black">
+    <div className="py-8 md:py-20 px-7 sm:px-14 md:px-0 bg-black">
       <div
         className="md:flex md:pb-4 pb-8
       lg:justify-center md:justify-evenly lg:gap-16 border-b"
@@ -71,11 +71,11 @@ const Footer = () => {
               <div
                 key={index}
                 className="w-full 
-              md:max-w-[calc(33.33%-20px)] 
-              h-96 md:max-h-20
+              md:max-w-[calc(33.33%-20px)]
+              h-80 md:max-h-20
               relative 
-              mb-12 md:mb-4 md:mr-4 
-              border border-slate-200"
+              mb-8 md:mb-4 md:mr-4 
+              md:border md:border-slate-200"
               >
                 <a href="https://www.instagram.com/ultrawide.productions/">
                   <Image
