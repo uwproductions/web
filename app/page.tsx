@@ -1,12 +1,11 @@
 import Banner from "@/components/Banner";
-import Button from "@/components/Button";
-import Image from "next/image";
-import Link from "next/link";
+import Quote from "@/components/Quote";
 
 export default function Home() {
   return (
     <main className="flex-col bg-white">
       <Banner />
+      <Quote />
       Hi
     </main>
   );

@@ -2,6 +2,7 @@ import React from "react";
 import Image from "next/image";
 import Link from "next/link";
 import classNames from "classnames";
+import Logo from "./Logo";
 
 const Footer = () => {
   const newArr = Array(6).fill(null);
@@ -94,10 +95,7 @@ const Footer = () => {
           {links}
         </div>
       </div>
-      <div className="text-center h-[53px] text-white mt-5">
-        <h2 className="font-bold text-[24px]">ULTRAWIDE</h2>
-        <h3 className="leading-[2px] text-[19px]">PRODUCTIONS</h3>
-      </div>
+      <Logo variant="secondary"/>
     </div>
   );
 };
