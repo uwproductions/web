@@ -24,7 +24,7 @@ const Quote = () => {
     </>
   );
   return (
-    <div className="flex justify-center p-[200px] ">
+    <div className="flex justify-center p-[140px] ">
       <div className="flex flex-col items-center max-w-[800px]">
         <p
           className={classNames([
