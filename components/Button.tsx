@@ -3,13 +3,19 @@
 import React from "react";
 import classNames from "classnames";
 
-const Button = ({ variant = "primary", text = "", onClick = () => {} }) => {
+const Button = ({
+  className = "",
+  variant = "primary",
+  text = "",
+  onClick = () => {},
+}) => {
   return (
     <button
       className={classNames({
         "bg-black text-white": variant === "primary",
         "bg-white text-black": variant === "secondary",
-        'rounded-full p-4 font-bold transform transition hover:scale-105': true,
+        "rounded-full py-4 px-6 font-bold transform transition hover:scale-105": true,
+        [className]: true,
       })}
       onClick={onClick}
     >
