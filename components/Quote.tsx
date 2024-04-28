@@ -24,14 +24,10 @@ const Quote = () => {
     </>
   );
   return (
-    <div className="flex justify-center p-[140px] ">
+    <div className="flex justify-center px-[140px] py-20">
       <div className="flex flex-col items-center max-w-[800px]">
         <p
-          className={classNames([
-            urbanist.className,
-            "font-[600]",
-            "text-4xl",
-          ])}
+          className={classNames([urbanist.className, "font-[600]", "text-4xl"])}
         >
           You don’t love someone for their looks, or their clothes or their
           fancy car, but because they sing a song only you can hear.

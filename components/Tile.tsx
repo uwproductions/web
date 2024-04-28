@@ -15,7 +15,7 @@ const Tile = ({ src, title, subtitle }: TileProps) => {
   const [hovered, setHovered] = React.useState(false);
   return (
     <div
-      className="flex flex-col items-center relative h-[400px]"
+      className="flex flex-col items-center relative h-[400px] w-[40%]"
       onMouseEnter={() => setHovered(true)}
       onMouseLeave={() => setHovered(false)}
     >
@@ -46,8 +46,8 @@ const Tile = ({ src, title, subtitle }: TileProps) => {
           "rounded-2xl",
         ])}
       >
-        <h2 className="text-2xl font-bold">{title}</h2>
-        <p className="text-lg font-light">{subtitle}</p>
+        <h2 className="text-2xl font-bold px-5 pt-5">{title}</h2>
+        <p className="text-lg font-light px-5">{subtitle}</p>
       </motion.div>
     </div>
   );
