@@ -6,25 +6,25 @@ import { urbanist } from "@/app/utils/font";
 const OurLatestWorks = () => {
   const gridItems = [
     {
-      title: "Roaming the World’s Pathways",
+      title: "Roaming the World’s Pathways1",
       subtitle: "Subtitle 1",
       href: "/",
       src: "/assets/work/wedding/1/1.jpg",
     },
     {
-      title: "Roaming the World’s Pathways",
+      title: "Roaming the World’s Pathways2",
       subtitle: "Subtitle 2",
       href: "/",
       src: "/assets/work/wedding/1/1.jpg",
     },
     {
-      title: "Roaming the World’s Pathways",
+      title: "Roaming the World’s Pathways3",
       subtitle: "Subtitle 3",
       href: "/",
       src: "/assets/work/wedding/1/1.jpg",
     },
     {
-      title: "Roaming the World’s Pathways",
+      title: "Roaming the World’s Pathways4",
       subtitle: "Subtitle 4",
       href: "/",
       src: "/assets/work/wedding/1/1.jpg",
