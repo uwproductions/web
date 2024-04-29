@@ -39,7 +39,7 @@ const OurLatestWorks = () => {
             "font-bold",
             "font-semibold",
             "text-center",
-            'mb-[80px]',
+            "mb-[80px]",
             urbanist.className,
           ])}
         >
