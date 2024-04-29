@@ -7,6 +7,7 @@ import { motion } from "framer-motion";
 
 import { usePathname } from "next/navigation";
 import Logo from "./Logo";
+import navLinks from "@/app/utils/navLinks";
 
 const Header = () => {
   const location = usePathname();
@@ -32,25 +33,6 @@ const Header = () => {
     "text-white bg-black ": isScrolled,
     "text-black bg-white": !isScrolled,
   });
-
-  const navLinks = [
-    {
-      name: "Home",
-      href: "/",
-    },
-    {
-      name: "Our Work",
-      href: "/work",
-    },
-    {
-      name: "About",
-      href: "/about",
-    },
-    {
-      name: "Contact",
-      href: "/contact",
-    },
-  ];
 
   const links = (
     <div className="flex gap-10 justify-center font-bold">

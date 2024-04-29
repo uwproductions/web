@@ -3,6 +3,7 @@
 import Image from "next/image";
 import React from "react";
 import { motion } from "framer-motion";
+import { urbanist } from "@/app/utils/font";
 import classNames from "classnames";
 
 type TileProps = {
@@ -15,7 +16,7 @@ const Tile = ({ src, title, subtitle }: TileProps) => {
   const [hovered, setHovered] = React.useState(false);
   return (
     <div
-      className="flex flex-col items-center relative h-[400px]"
+      className="flex flex-col items-center relative h-[400px] cursor-pointer max-w-[545px] overflow-hidden"
       onMouseEnter={() => setHovered(true)}
       onMouseLeave={() => setHovered(false)}
     >
@@ -37,6 +38,7 @@ const Tile = ({ src, title, subtitle }: TileProps) => {
           },
         }}
         className={classNames([
+          urbanist.className,
           "absolute",
           "z-10",
           "bottom-0",
@@ -44,6 +46,11 @@ const Tile = ({ src, title, subtitle }: TileProps) => {
           "h-[100px]",
           "bg-white",
           "rounded-2xl",
+          "flex",
+          "flex-col",
+          // "items-center",
+          "justify-center",
+          "px-10"
         ])}
       >
         <h2 className="text-2xl font-bold">{title}</h2>

@@ -3,27 +3,10 @@ import Image from "next/image";
 import Link from "next/link";
 import classNames from "classnames";
 import Logo from "./Logo";
+import navLinks from "@/app/utils/navLinks";
 
 const Footer = () => {
   const newArr = Array(6).fill(null);
-  const navLinks = [
-    {
-      name: "home",
-      href: "/",
-    },
-    {
-      name: "our work",
-      href: "/work",
-    },
-    {
-      name: "about",
-      href: "/about",
-    },
-    {
-      name: "contact",
-      href: "/contact",
-    },
-  ];
 
   const links = (
     <div className="flex flex-col md:justify-center font-light gap-2.5 max-w-[30%] md:max-w-full">
@@ -95,7 +78,7 @@ const Footer = () => {
           {links}
         </div>
       </div>
-      <Logo variant="secondary"/>
+      <Logo variant="secondary" />
     </div>
   );
 };

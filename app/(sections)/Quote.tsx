@@ -2,7 +2,7 @@ import { urbanist } from "@/app/utils/font";
 import classNames from "classnames";
 import Image from "next/image";
 import React from "react";
-import Button from "./Button";
+import Button from "../../components/Button";
 
 const Quote = () => {
   const strokes = (
