@@ -53,8 +53,8 @@ const Tile = ({ src, title, subtitle }: TileProps) => {
           "px-10"
         ])}
       >
-        <h2 className="text-2xl font-bold">{title}</h2>
-        <p className="text-lg font-light">{subtitle}</p>
+        <h2 className="text-2xl font-bold px-5 pt-5">{title}</h2>
+        <p className="text-lg font-light px-5">{subtitle}</p>
       </motion.div>
     </div>
   );

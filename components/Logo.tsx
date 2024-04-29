@@ -30,7 +30,7 @@ const Logo = ({ size = "sm", variant = "primary" }: LogoProps) => {
       </h2>
       <h3
         className={classNames([
-          "leading-[2px]",
+          "leading-[5px]",
           sizeMap[size as keyof typeof sizeMap][1],
         ])}
       >
