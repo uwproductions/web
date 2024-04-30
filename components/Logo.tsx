@@ -2,11 +2,12 @@ import classNames from "classnames";
 import React from "react";
 
 type LogoProps = {
+  className?: string;
   size?: "sm" | "md" | "lg" | "xl";
   variant?: "primary" | "secondary";
 };
 
-const Logo = ({ size = "sm", variant = "primary" }: LogoProps) => {
+const Logo = ({ className, size = "sm", variant = "primary" }: LogoProps) => {
   const sizeMap = {
     sm: ["text-[24px]", "text-[19px]"],
     md: ["text-[48px]", "text-[38px]"],
@@ -15,7 +16,7 @@ const Logo = ({ size = "sm", variant = "primary" }: LogoProps) => {
   };
   return (
     <div
-      className={classNames(["text-center h-[53px]"], {
+      className={classNames(["text-center h-[53px]", className], {
         "text-white": variant === "secondary",
         "text-black": variant === "primary",
       })}

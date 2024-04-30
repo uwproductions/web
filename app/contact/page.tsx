@@ -40,6 +40,8 @@ const Contact = () => {
                   name="message"
                   cols={20}
                   rows={5}
+                  title="Message"
+                  placeholder="Enter your message"
                 ></textarea>
               </div>
             </fieldset>

@@ -4,6 +4,7 @@ import Link from "next/link";
 import classNames from "classnames";
 import Logo from "./Logo";
 import navLinks from "@/app/utils/navLinks";
+import { urbanist } from "@/app/utils/font";
 
 const Footer = () => {
   const newArr = Array(6).fill(null);
@@ -47,19 +48,26 @@ const Footer = () => {
       lg:justify-center md:justify-evenly lg:gap-16 border-b"
       >
         <div className="md:max-w-72">
-          <header className="md:text-start text-center mb-8 text-white text-3xl">
+          <header
+            className={classNames([
+              "md:text-start text-center mb-8 text-white text-3xl font-semibold text-[40px]",
+              urbanist.className,
+            ])}
+          >
             Follow me on Instagram
           </header>
           <div className="flex flex-wrap justify-evenly">
             {newArr.map((_, index) => (
               <div
                 key={index}
-                className="w-full 
-              md:max-w-[calc(33.33%-20px)]
-              h-80 md:max-h-20
-              relative 
-              mb-8 md:mb-4 md:mr-4 
-              md:border md:border-slate-200"
+                className={classNames([
+                  "w-full",
+                  "md:max-w-[calc(33.33%-20px)]",
+                  "h-80 md:max-h-20",
+                  "relative",
+                  "mb-8 md:mb-4 md:mr-4",
+                  // "md:border md:border-slate-200",
+                ])}
               >
                 <a href="https://www.instagram.com/ultrawide.productions/">
                   <Image
