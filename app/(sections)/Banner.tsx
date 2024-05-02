@@ -21,7 +21,7 @@ const Banner = () => {
   }, []);
 
   return (
-    <div className="flex h-screen p-0 m-0 relative">
+    <div className="flex h-screen p-0 m-0 relative mb-40">
       {images.map((image, index) => (
         <motion.div
           key={index}

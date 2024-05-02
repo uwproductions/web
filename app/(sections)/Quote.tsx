@@ -24,7 +24,7 @@ const Quote = () => {
     </>
   );
   return (
-    <div className="flex justify-center px-[140px] py-20">
+    <div className="flex justify-center px-[140px] mb-40">
       <div className="flex flex-col items-center max-w-[800px]">
         <p
           className={classNames([urbanist.className, "font-[600]", "text-4xl"])}

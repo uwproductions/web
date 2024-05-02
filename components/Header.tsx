@@ -54,7 +54,7 @@ const Header = () => {
   );
 
   return (
-    <div className="fixed w-full top-0 z-10">
+    <div className="fixed w-full top-0 z-20">
       {isScrolled ? (
         <motion.div
           className="p-3 flex justify-center transition bg-[#FFFFFFC9] text-black"

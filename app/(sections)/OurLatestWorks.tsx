@@ -31,7 +31,7 @@ const OurLatestWorks = () => {
     },
   ];
   return (
-    <div className="flex justify-center">
+    <div className="flex justify-center mb-40">
       <div className="container">
         <p
           className={classNames([
