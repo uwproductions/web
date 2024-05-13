@@ -1,9 +1,12 @@
-import React from 'react'
+import React from "react";
+import OurLatestWorks from "../../components/OurLatestWorks";
 
 const Work = () => {
   return (
-    <div>Work</div>
-  )
-}
+    <div className="pt-20">
+      <OurLatestWorks showTabs />
+    </div>
+  );
+};
 
-export default Work
+export default Work;

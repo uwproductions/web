@@ -13,6 +13,8 @@ const Header = () => {
   const location = usePathname();
   const [isScrolled, setIsScrolled] = React.useState(false);
 
+  const hideBanner = location === "/work";
+
   useEffect(() => {
     const handleScroll = () => {
       if (window.scrollY > 0) {
@@ -30,8 +32,8 @@ const Header = () => {
   }, []);
 
   const activeClass = classNames(["font-bold", "rounded-full"], {
-    "text-white bg-black ": isScrolled,
-    "text-black bg-white": !isScrolled,
+    "text-white bg-black": isScrolled || hideBanner,
+    "text-black bg-white": !isScrolled && !hideBanner,
   });
 
   const links = (
@@ -55,7 +57,7 @@ const Header = () => {
 
   return (
     <div className="fixed w-full top-0 z-20">
-      {isScrolled ? (
+      {isScrolled || hideBanner ? (
         <motion.div
           className="p-3 flex justify-center transition bg-[#FFFFFFC9] text-black"
           initial={{ y: -100 }}

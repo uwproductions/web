@@ -5,17 +5,20 @@ import React from "react";
 import { motion } from "framer-motion";
 import { urbanist } from "@/app/utils/font";
 import classNames from "classnames";
+import Link from "next/link";
 
 type TileProps = {
   src: string;
   title: string;
   subtitle: string;
+  href: string;
 };
 
-const Tile = ({ src, title, subtitle }: TileProps) => {
+const Tile = ({ src, title, subtitle, href }: TileProps) => {
   const [hovered, setHovered] = React.useState(false);
   return (
-    <div
+    <Link
+      href={href}
       className="flex flex-col items-center relative h-[400px] cursor-pointer max-w-[545px] overflow-hidden"
       onMouseEnter={() => setHovered(true)}
       onMouseLeave={() => setHovered(false)}
@@ -50,13 +53,13 @@ const Tile = ({ src, title, subtitle }: TileProps) => {
           "flex-col",
           // "items-center",
           "justify-center",
-          "px-10"
+          "px-10",
         ])}
       >
         <h2 className="text-2xl font-bold px-5 pt-5">{title}</h2>
         <p className="text-lg font-light px-5">{subtitle}</p>
       </motion.div>
-    </div>
+    </Link>
   );
 };
 
