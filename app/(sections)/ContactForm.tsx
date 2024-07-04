@@ -5,23 +5,30 @@ import classNames from "classnames";
 import { urbanist } from "../utils/font";
 import Image from "next/image";
 import Button from "@/components/Button";
+// import { useEffect, useState } from "react";
 
 const inputClass =
   "border border-black rounded-lg p-3 w-full outline-none border-opacity-50";
 
 export default function ContactForm() {
   const [state, handleSubmit] = useForm("xeqynlej");
+  // const [hasAlreadySubmitted, setHasAlreadySubmitted] = useState(false);
 
-  const hasAlreadySubmitted = window.localStorage.getItem("hasSubmitted");
+  // useEffect(() => {
+  //   const submissionStatus = window.localStorage.getItem("hasSubmitted");
+  //   if (submissionStatus) setHasAlreadySubmitted(submissionStatus === "true");
+  // }, []);
 
-  if (state.succeeded || hasAlreadySubmitted) {
+  // useEffect(() => {
+  //   if (state.succeeded) {
+  //     window.localStorage.setItem("hasSubmitted", "true");
+  //     setHasAlreadySubmitted(true);
+  //   }
+  // }, [state.succeeded]);
+
+  if (state.succeeded) {
     return <p>Thanks for your submission!</p>;
   }
-  console.log({ state });
-  const isValid = () => {
-    // TODO: add validation and submit animation
-    // console.log({ state });
-  };
 
   return (
     <div className="flex justify-center mb-40">
@@ -39,7 +46,7 @@ export default function ContactForm() {
             Make an Appointment
           </h2>
           <form
-            onSubmit={() => handleSubmit}
+            onSubmit={handleSubmit}
             className={classNames([
               "flex",
               "flex-col",
