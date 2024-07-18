@@ -6,15 +6,17 @@ import Image from "next/image";
 import classNames from "classnames";
 import { urbanist } from "@/app/utils/font";
 
-const images = [
+const homepageImages = [
   "/assets/banner1.jpg",
   "/assets/banner2.jpg",
   "/assets/banner3.jpg",
 ];
 
-const Banner = ({ title }: { title?: string }) => {
+const Banner = ({ title, src }: { title?: string; src?: string[] }) => {
   const [currentImageIndex, setCurrentImageIndex] = useState(0); // Index of the current image
   const [scrollY, setScrollY] = useState(0);
+
+  const images = src || homepageImages;
 
   const onScroll = useCallback(() => {
     const { scrollY } = window;

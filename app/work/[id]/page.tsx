@@ -18,7 +18,7 @@ const WorkDetail = ({ params: { id } }: WorkDetailProps) => {
   const { title } = project;
   return (
     <div>
-      <Banner title={title} />
+      <Banner title={title} src={project.images} />
       <div className="grid grid-cols-2 gap-4 md:grid-cols-4">
         <div className="grid gap-4">
           <div>

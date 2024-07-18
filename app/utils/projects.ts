@@ -5,6 +5,7 @@ const projects = [
     subtitle: "Subtitle 1",
     href: "/work/1",
     src: "/assets/work/wedding/1/1.jpg",
+    // images: ["/assets/work/wedding/1/1.jpg", "/assets/work/wedding/1/2.jpg"],
   },
   {
     id: 2,
