@@ -72,7 +72,9 @@ const Header = () => {
       ) : (
         <div className="p-5 transition flex-col justify-between items-center bg-transparent text-white">
           {links}
-          <Logo variant="secondary" size="xl" />
+          <div className="h-screen items-center flex w-6">
+            <Logo variant="secondary" size="xl" />
+          </div>
         </div>
       )}
     </div>
