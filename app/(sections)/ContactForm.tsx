@@ -5,6 +5,7 @@ import classNames from "classnames";
 import { urbanist } from "../utils/font";
 import Image from "next/image";
 import Button from "@/components/Button";
+import { useEffect } from "react";
 // import { useEffect, useState } from "react";
 
 const inputClass =
@@ -84,6 +85,7 @@ export default function ContactForm() {
                 type="number"
                 name="phone"
                 className={inputClass}
+                required
               />
               <ValidationError
                 prefix="Phone"
@@ -93,7 +95,12 @@ export default function ContactForm() {
             </div>
             <div>
               <label htmlFor="message">Message</label>
-              <textarea id="message" name="message" className={inputClass} />
+              <textarea
+                id="message"
+                name="message"
+                className={inputClass}
+                required
+              />
               <ValidationError
                 prefix="Message"
                 field="message"
