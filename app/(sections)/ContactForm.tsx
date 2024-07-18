@@ -5,7 +5,7 @@ import classNames from "classnames";
 import { urbanist } from "../utils/font";
 import Image from "next/image";
 import Button from "@/components/Button";
-import { useEffect } from "react";
+// import { useEffect } from "react";
 // import { useEffect, useState } from "react";
 
 const inputClass =
@@ -13,26 +13,13 @@ const inputClass =
 
 export default function ContactForm() {
   const [state, handleSubmit] = useForm("xeqynlej");
-  // const [hasAlreadySubmitted, setHasAlreadySubmitted] = useState(false);
-
-  // useEffect(() => {
-  //   const submissionStatus = window.localStorage.getItem("hasSubmitted");
-  //   if (submissionStatus) setHasAlreadySubmitted(submissionStatus === "true");
-  // }, []);
-
-  // useEffect(() => {
-  //   if (state.succeeded) {
-  //     window.localStorage.setItem("hasSubmitted", "true");
-  //     setHasAlreadySubmitted(true);
-  //   }
-  // }, [state.succeeded]);
 
   if (state.succeeded) {
     return <p>Thanks for your submission!</p>;
   }
 
   return (
-    <div className="flex justify-center mb-40">
+    <div className="flex justify-center my-40">
       <div className="container flex justify-between gap-20">
         <div className="flex flex-col w-full">
           <h2
@@ -57,7 +44,7 @@ export default function ContactForm() {
           >
             <div>
               <label htmlFor="name">Name</label>
-              <input id="name" name="name" className={inputClass} />
+              <input id="name" name="name" className={inputClass} required />
               <ValidationError
                 prefix="Name"
                 field="name"
@@ -71,6 +58,7 @@ export default function ContactForm() {
                 type="email"
                 name="email"
                 className={inputClass}
+                required
               />
               <ValidationError
                 prefix="Email"
@@ -123,7 +111,7 @@ export default function ContactForm() {
             objectFit="cover"
             className="rounded-2xl"
             alt="form_image"
-            src={"/assets/contactForm.jpg"}
+            src={"/assets/work/concert/1/1.jpg"}
           />
         </div>
       </div>
