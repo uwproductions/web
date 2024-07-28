@@ -8,7 +8,7 @@ export default function Home() {
     <main className="flex-col bg-white">
       <Banner />
       <Quote />
-      <OurLatestWorks limit={4} />
+      <OurLatestWorks limit={6} />
       <ContactForm />
     </main>
   );

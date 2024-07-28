@@ -16,7 +16,7 @@ const Logo = ({ className, size = "sm", variant = "primary" }: LogoProps) => {
   };
   return (
     <div
-      className={classNames(["text-center h-[53px]", className], {
+      className={classNames(["text-center", className], {
         "text-white": variant === "secondary",
         "text-black": variant === "primary",
       })}

@@ -5,16 +5,24 @@ import React from "react";
 
 type Item = {
   label: string;
-  key?: string;
+  key: string;
 };
 
 type TabProps = {
   items: Item[];
   className?: string;
+  showActiveProjects?: (params?: string) => void;
 };
 
-const Tabs = ({ items, className }: TabProps) => {
-  const [active, setActive] = React.useState(items[0].key);
+const Tabs = ({ items, className, showActiveProjects }: TabProps) => {
+  const [active, setActive] = React.useState(items[0]?.key || "");
+
+  const handleActiveTab = (key: string) => {
+    setActive(key);
+    if (showActiveProjects) {
+      showActiveProjects(key);
+    }
+  };
 
   return (
     <div className={className}>
@@ -22,7 +30,7 @@ const Tabs = ({ items, className }: TabProps) => {
         {items.map((item) => (
           <li
             key={item.key}
-            onClick={() => setActive(item.key)}
+            onClick={() => handleActiveTab(item.key)}
             className="cursor-pointer"
           >
             <p

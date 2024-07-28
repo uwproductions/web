@@ -25,7 +25,6 @@ const Footer = () => {
 
   const address = (
     <div className="flex flex-col gap-1 max-w-[70%] md:max-w-full text-white text-sm md:text-md font-light">
-      {/* <div className="flex flex-col gap-2.5"> */}
       <p>2/14, Sector L, Aashiyana</p>
       <p>Lucknow</p>
       <p>
@@ -37,63 +36,73 @@ const Footer = () => {
         </a>
       </p>
     </div>
-    // <div></div>
-    // </div>
   );
 
   return (
-    <div className="py-8 md:py-20 px-7 sm:px-14 md:px-0 bg-black">
-      <div
-        className="md:flex md:pb-4 pb-8
-      lg:justify-center md:justify-evenly lg:gap-16"
-      >
-        <div className="md:max-w-[30rem]">
-          <header
-            className={classNames([
-              "md:text-start text-center mb-8 text-white text-3xl font-semibold text-[40px]",
-              urbanist.className,
-            ])}
-          >
-            Follow me on Instagram
-          </header>
-          <div className="flex flex-wrap justify-between gap-[1.5rem]">
-            {newArr.map((_, index) => (
-              <div
-                key={index}
-                className={classNames([
-                  "w-full",
-                  "md:max-w-[calc(33.33%-20px)]",
-                  "h-80 md:max-h-20",
-                  "relative",
-                  "mb-2",
-                  // "md:border md:border-slate-200",
-                ])}
-              >
-                <a href="https://www.instagram.com/ultrawide.productions/">
-                  <Image
-                    fill={true}
-                    style={{ objectFit: "cover" }}
-                    src={`/assets/footerImages/footerImage${index + 1}.webp`}
-                    alt={`Image ${index + 1}`}
-                  />
-                </a>
-              </div>
-            ))}
+    <div className="py-8 md:py-20 px-7 sm:px-14 md:px-0 bg-black flex justify-center">
+      <div className="lg:w-[1140px]">
+        <div
+          className="md:flex md:pb-4 pb-8
+      lg:justify-between md:justify-evenly 
+      lg:gap-16"
+        >
+          <div className="md:max-w-[30rem]">
+            <header
+              className={classNames([
+                "md:text-start text-center mb-8 text-white text-3xl font-semibold text-[40px]",
+                urbanist.className,
+              ])}
+            >
+              Follow me on Instagram
+            </header>
+            <div className="flex flex-wrap justify-between gap-[1.5rem]">
+              {newArr.map((_, index) => (
+                <div
+                  key={index}
+                  className={classNames([
+                    "w-full",
+                    "md:max-w-[calc(33.33%-20px)]",
+                    "h-80 md:max-h-20",
+                    "relative",
+                    "mb-2",
+                    // "md:border md:border-slate-200",
+                  ])}
+                >
+                  <a href="https://www.instagram.com/ultrawide.productions/">
+                    <Image
+                      fill={true}
+                      style={{ objectFit: "cover" }}
+                      src={`/assets/footerImages/footerImage${index + 1}.webp`}
+                      alt={`Image ${index + 1}`}
+                    />
+                  </a>
+                </div>
+              ))}
+            </div>
+          </div>
+          <div className="flex justify-evenly md:items-center md:gap-8 lg:gap-16">
+            {address}
+            {links}
           </div>
         </div>
-        <div className="flex justify-evenly md:items-center md:gap-8 lg:gap-16">
-          {address}
-          {links}
-        </div>
-      </div>
-      <div className={classNames(["flex", "justify-center"])}>
-        <div className={classNames(["md:min-w-[800px]"])}>
-          <div
-            className={classNames(["flex", "justify-between", "items-center"])}
-          >
-            <Logo variant="secondary" className={classNames(["text-start"])} />
-            <div className={classNames(["text-white", "text-md", "text-end"])}>
-              <p>© Ultrawide Productions</p>
+        <div className={classNames(["flex", "justify-center"])}>
+          <div className={classNames(["md:min-w-[800px]"])}>
+            <div
+              className={classNames([
+                "flex",
+                "justify-between",
+                "items-center",
+              ])}
+            >
+              <Logo
+                variant="secondary"
+                className={classNames(["text-start"])}
+              />
+              <div
+                className={classNames(["text-white", "text-md", "text-end"])}
+              >
+                <p>© Ultrawide Productions</p>
+              </div>
             </div>
           </div>
         </div>

@@ -1,4 +1,6 @@
-import React from "react";
+"use client";
+
+import React, { useState } from "react";
 import Tile from "./Tile";
 import classNames from "classnames";
 import { urbanist } from "@/app/utils/font";
@@ -20,18 +22,29 @@ const OurLatestWorks = ({
   showTabs?: boolean;
   limit?: number;
 }) => {
+  const [activeProjects, setActiveProjects] = useState(projects);
+
+  const handleActiveProjects = (key?: string) => {
+    if (key === "all" || !key) {
+      setActiveProjects(projects);
+    } else {
+      const activeProjects = projects.filter((project) =>
+        project.subtitle.toLowerCase().includes(key.toLowerCase())
+      );
+      setActiveProjects(activeProjects);
+    }
+  };
+
   return (
     <div className="flex justify-center mb-40">
       <div className="container">
         <p
           className={classNames(
-            [
-              "text-[140px]",
-              "font-bold",
-              "font-semibold",
-              "text-center",
-              urbanist.className,
-            ],
+            "text-[140px]",
+            "font-bold",
+            "font-semibold",
+            "text-center",
+            urbanist.className,
             {
               "mb-[80px]": !showTabs,
             }
@@ -40,12 +53,18 @@ const OurLatestWorks = ({
           our latest works
         </p>
         {showTabs && (
-          <Tabs items={items} className="flex justify-center mb-[40px]" />
+          <Tabs
+            items={items}
+            showActiveProjects={handleActiveProjects}
+            className="flex justify-center mb-[40px]"
+          />
         )}
         <div className="flex flex-wrap gap-10">
-          {projects.slice(0, limit || projects.length).map((tile) => (
-            <Tile key={tile.title} {...tile} />
-          ))}
+          {activeProjects
+            .slice(0, limit || activeProjects.length)
+            .map((tile) => (
+              <Tile key={tile.title} {...tile} />
+            ))}
         </div>
       </div>
     </div>
