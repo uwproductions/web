@@ -72,7 +72,7 @@ const Header = () => {
       ) : (
         <div className="p-5 transition flex-col justify-between items-center bg-transparent text-white">
           {links}
-          <div className="items-center flex">
+          <div className="flex items-center justify-center h-[80vh] opacity-70">
             <Logo variant="secondary" size="xl" />
           </div>
         </div>

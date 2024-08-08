@@ -24,7 +24,7 @@ const Banner = ({ title, src }: { title?: string; src?: string[] }) => {
   }, []);
 
   useEffect(() => {
-    window.addEventListener("scroll", onScroll, { passive: true });
+    window.addEventListener("scroll", onScroll);
     const interval = setInterval(() => {
       setCurrentImageIndex((prevIndex) => (prevIndex + 1) % images.length);
     }, 3000);

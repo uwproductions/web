@@ -1,15 +1,14 @@
 const projects = [
   {
     id: 1,
-    title: "Roaming the World’s Pathways1",
-    subtitle: "Interior Architecture",
+    title: "Pathways of Elegance",
+    subtitle: "A Journey Through Interior Architecture",
     href: "/work/1",
     src: "/assets/work/architecture/1/5.jpg",
     bannerImages: [
       "/assets/work/architecture/1/3.jpg",
       "/assets/work/architecture/1/4.jpg",
       "/assets/work/architecture/1/8.jpg",
-      // "/assets/work/architecture/1/12.jpg",
     ],
     images: [
       "/assets/work/architecture/1/1.jpg",
@@ -27,15 +26,14 @@ const projects = [
   },
   {
     id: 2,
-    title: "Roaming the World’s Pathways2",
-    subtitle: "Food",
+    title: "Culinary Artistry",
+    subtitle: "Capturing the Essence of Fine Dining",
     href: "/work/2",
     src: "/assets/work/food/1.jpg",
     bannerImages: [
       "/assets/work/food/1.jpg",
       "/assets/work/food/2.jpg",
       "/assets/work/food/3.jpg",
-      // "/assets/work/architecture/1/12.jpg",
     ],
     images: [
       "/assets/work/food/1.jpg",
@@ -48,15 +46,14 @@ const projects = [
   },
   {
     id: 3,
-    title: "Roaming the World’s Pathways3",
-    subtitle: "Interior Architecture",
+    title: "Architectural Masterpieces",
+    subtitle: "Exploring Interior Spaces",
     href: "/work/3",
     src: "/assets/work/architecture/2/8.jpg",
     bannerImages: [
       "/assets/work/architecture/2/3.jpg",
       "/assets/work/architecture/2/4.jpg",
       "/assets/work/architecture/2/8.jpg",
-      // "/assets/work/architecture/1/12.jpg",
     ],
     images: [
       "/assets/work/architecture/2/1.jpg",
@@ -84,8 +81,8 @@ const projects = [
   },
   {
     id: 4,
-    title: "Roaming the World’s Pathways4",
-    subtitle: "Concert",
+    title: "Symphony of Lights",
+    subtitle: "The Magic of Live Concerts",
     href: "/work/4",
     src: "/assets/work/concert/1/14.jpg",
     bannerImages: [
@@ -103,8 +100,8 @@ const projects = [
   },
   {
     id: 5,
-    title: "Roaming the World’s Pathways5",
-    subtitle: "Fashion",
+    title: "Elegance in Motion",
+    subtitle: "A Glimpse into the World of Fashion",
     href: "/work/5",
     src: "/assets/work/fashion/1/5.jpg",
     bannerImages: [
@@ -122,8 +119,8 @@ const projects = [
   },
   {
     id: 6,
-    title: "Roaming the World’s Pathways6",
-    subtitle: "Interior Architecture",
+    title: "Architectural Harmony",
+    subtitle: "Designing Spaces with Purpose",
     href: "/work/6",
     src: "/assets/work/architecture/5/2.jpg",
     bannerImages: [

@@ -57,7 +57,7 @@ const Footer = () => {
             </header>
             <div className="flex flex-wrap justify-between gap-[1.5rem]">
               {newArr.map((_, index) => (
-                <div
+                <a
                   key={index}
                   className={classNames([
                     "w-full",
@@ -67,16 +67,16 @@ const Footer = () => {
                     "mb-2",
                     // "md:border md:border-slate-200",
                   ])}
+                  href="https://www.instagram.com/ultrawide.productions/"
                 >
-                  <a href="https://www.instagram.com/ultrawide.productions/">
-                    <Image
-                      fill={true}
-                      style={{ objectFit: "cover" }}
-                      src={`/assets/footerImages/footerImage${index + 1}.webp`}
-                      alt={`Image ${index + 1}`}
-                    />
-                  </a>
-                </div>
+                  <Image
+                    style={{ objectFit: "cover" }}
+                    src={`/assets/footerImages/footerImage${index + 1}.webp`}
+                    alt={`Image ${index + 1}`}
+                    width={120}
+                    height={80}
+                  />
+                </a>
               ))}
             </div>
           </div>

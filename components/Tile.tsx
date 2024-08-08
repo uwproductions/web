@@ -23,13 +23,14 @@ const Tile = ({ src, title, subtitle, href }: TileProps) => {
       onMouseEnter={() => setHovered(true)}
       onMouseLeave={() => setHovered(false)}
     >
-      <Image
-        src={src}
-        alt={`image_${src}`}
-        width={545}
-        height={363}
-        className="rounded-2xl"
-      />
+      <div className="h-[363px] w-[545px]">
+        <Image
+          src={src}
+          alt={`image_${src}`}
+          layout="fill"
+          className="rounded-2xl max-h-[363px] object-cover object-top"
+        />
+      </div>
       <motion.div
         animate={{
           bottom: hovered ? 60 : 0,
