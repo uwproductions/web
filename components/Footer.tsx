@@ -86,7 +86,7 @@ const Footer = () => {
           </div>
         </div>
         <div className={classNames(["flex", "justify-center"])}>
-          <div className={classNames(["md:min-w-[800px]"])}>
+          <div className={classNames(["w-full md:min-w-[800px]"])}>
             <div
               className={classNames([
                 "flex",

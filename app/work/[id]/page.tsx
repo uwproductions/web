@@ -21,11 +21,11 @@ const WorkDetail = ({ params: { id } }: WorkDetailProps) => {
   return (
     <div>
       <Banner title={title} src={bannerImages} />
-      <div className="grid gap-4 md:grid-cols-2 xl:grid-cols-3 mb-[50px] mx-[20px]">
+      <div className="grid grid-cols-2 gap-4 md:grid-cols-4">
         {images.map((image, index) => (
-          <div className="relative w-[350px] md:w-full h-[350px] md:h-[450px]">
+          <div key={index} className="relative w-full h-64">
             <Image
-              className="rounded-lg"
+              className="h-full w-auto"
               src={image}
               layout="fill"
               alt="gallery-photo"
