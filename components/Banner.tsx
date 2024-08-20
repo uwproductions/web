@@ -14,22 +14,14 @@ const homepageImages = [
 
 const Banner = ({ title, src }: { title?: string; src?: string[] }) => {
   const [currentImageIndex, setCurrentImageIndex] = useState(0); // Index of the current image
-  const [scrollY, setScrollY] = useState(0);
 
   const images = src || homepageImages;
 
-  const onScroll = useCallback(() => {
-    const { scrollY } = window;
-    setScrollY(Math.floor(scrollY / 10));
-  }, []);
-
   useEffect(() => {
-    window.addEventListener("scroll", onScroll);
     const interval = setInterval(() => {
       setCurrentImageIndex((prevIndex) => (prevIndex + 1) % images.length);
     }, 3000);
     return () => {
-      window.removeEventListener("scroll", onScroll);
       clearInterval(interval);
     };
   }, []);
@@ -42,10 +34,6 @@ const Banner = ({ title, src }: { title?: string; src?: string[] }) => {
             urbanist.className,
             "container text-[60px] font-[600] text-white",
           ])}
-          style={{
-            opacity: (100 - scrollY * 2) / 100,
-            paddingBottom: scrollY * 2,
-          }}
         >
           {title}
         </motion.p>

@@ -1,7 +1,7 @@
 import Banner from "@/components/Banner";
 import OurLatestWorks from "@/components/OurLatestWorks";
-import Quote from "@/app/(sections)/Quote";
-import ContactForm from "./(sections)/ContactForm";
+import Quote from "@/components/Quote";
+import ContactForm from "../components/ContactForm";
 
 export default function Home() {
   return (

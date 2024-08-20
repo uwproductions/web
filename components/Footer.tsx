@@ -39,8 +39,8 @@ const Footer = () => {
   );
 
   return (
-    <div className="py-8 md:py-20 px-[30px] bg-black flex justify-center">
-      <div className="w-full lg:w-[1140px]">
+    <div className="py-8 md:py-20 px-[10px] bg-black flex justify-center">
+      <div className="w-full container">
         <div className="md:flex md:pb-4 pb-8 justify-between">
           <div className="md:max-w-[30rem]">
             <header

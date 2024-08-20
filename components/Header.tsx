@@ -15,6 +15,8 @@ const Header = () => {
 
   const hideBanner = location === "/work";
 
+  const hideLogo = location.includes("/work");
+
   useEffect(() => {
     const handleScroll = () => {
       if (window.scrollY > 0) {
@@ -72,9 +74,11 @@ const Header = () => {
       ) : (
         <div className="p-5 transition flex-col justify-between items-center bg-transparent text-white">
           {links}
-          <div className="flex items-center justify-center h-[80vh] opacity-70">
-            <Logo variant="secondary" size="xl" />
-          </div>
+          {!hideLogo && (
+            <div className="flex items-end justify-center h-[90vh] opacity-70">
+              <Logo variant="secondary" size="xl" />
+            </div>
+          )}
         </div>
       )}
     </div>

@@ -38,13 +38,13 @@ const WorkDetail = ({ params: { id } }: WorkDetailProps) => {
     <>
       <Banner title={title} src={bannerImages} />
       <div className="flex justify-center mb-40">
-        <div className="container px-[20px]" onClick={() => setIsOpen(true)}>
+        <div className="container px-[10px]" onClick={() => setIsOpen(true)}>
           <ColumnsPhotoAlbum
             photos={imagesObj}
             columns={(containerWidth) => {
-              if (containerWidth < 768) return 1;
-              if (containerWidth < 1024) return 2;
-              return 3;
+              // if (containerWidth < 768) return 3;
+              // if (containerWidth < 1024) return 2;
+              return 2;
             }}
           />
         </div>
