@@ -12,7 +12,6 @@
   }
 } */
 
-
 /* :root {
   --foreground-rgb: 0, 0, 0;
   --background-start-rgb: 214, 219, 220;
@@ -44,12 +43,17 @@ body {
 } */
 
 .container {
-  max-width: 1140px;
+  max-width: 1200px;
 }
 
 /* to hide arrows from number input */
 input::-webkit-outer-spin-button,
 input::-webkit-inner-spin-button {
-    -webkit-appearance: none;
-    margin: 0;
+  -webkit-appearance: none;
+  margin: 0;
+}
+
+.react-photo-album--image {
+  border-radius: 20px;
+  object-fit: cover;
 }

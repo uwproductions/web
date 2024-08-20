@@ -39,13 +39,9 @@ const Footer = () => {
   );
 
   return (
-    <div className="py-8 md:py-20 px-7 sm:px-14 md:px-0 bg-black flex justify-center">
-      <div className="lg:w-[1140px]">
-        <div
-          className="md:flex md:pb-4 pb-8
-      lg:justify-between md:justify-evenly 
-      lg:gap-16"
-        >
+    <div className="py-8 md:py-20 px-[30px] bg-black flex justify-center">
+      <div className="w-full lg:w-[1140px]">
+        <div className="md:flex md:pb-4 pb-8 justify-between">
           <div className="md:max-w-[30rem]">
             <header
               className={classNames([
@@ -73,20 +69,19 @@ const Footer = () => {
                     style={{ objectFit: "cover" }}
                     src={`/assets/footerImages/footerImage${index + 1}.webp`}
                     alt={`Image ${index + 1}`}
-                    width={120}
-                    height={80}
+                    fill={true}
                   />
                 </a>
               ))}
             </div>
           </div>
-          <div className="flex justify-evenly md:items-center md:gap-8 lg:gap-16">
+          <div className="flex justify-between md:items-center md:gap-8 lg:gap-16">
             {address}
             {links}
           </div>
         </div>
         <div className={classNames(["flex", "justify-center"])}>
-          <div className={classNames(["w-full md:min-w-[800px]"])}>
+          <div className={classNames(["w-full"])}>
             <div
               className={classNames([
                 "flex",

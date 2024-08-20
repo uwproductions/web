@@ -29,7 +29,7 @@ const OurLatestWorks = ({
       setActiveProjects(projects);
     } else {
       const activeProjects = projects.filter((project) =>
-        project.subtitle.toLowerCase().includes(key.toLowerCase())
+        project.src.toLowerCase().includes(key.toLowerCase())
       );
       setActiveProjects(activeProjects);
     }

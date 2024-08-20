@@ -1,7 +1,13 @@
+"use client";
+
+import { ColumnsPhotoAlbum } from "react-photo-album";
+import "react-photo-album/columns.css";
+import Lightbox from "yet-another-react-lightbox";
+import "yet-another-react-lightbox/styles.css";
+
 import projects from "@/app/utils/projects";
 import Banner from "@/components/Banner";
-import Image from "next/image";
-import React from "react";
+import React, { useState } from "react";
 
 interface WorkDetailProps {
   params: {
@@ -10,6 +16,8 @@ interface WorkDetailProps {
 }
 
 const WorkDetail = ({ params: { id } }: WorkDetailProps) => {
+  const [isOpen, setIsOpen] = useState<boolean>(false);
+
   const project = projects.find((project) => project.id === Number(id));
 
   if (!project) {
@@ -18,25 +26,38 @@ const WorkDetail = ({ params: { id } }: WorkDetailProps) => {
 
   const { title, images, bannerImages } = project;
 
+  const imagesObj = images.map((image) => {
+    return { src: image, width: 800, height: 800 };
+  });
+
+  const imagesObjLightBox = images.map((image) => {
+    return { src: image };
+  });
+
   return (
     <>
       <Banner title={title} src={bannerImages} />
       <div className="flex justify-center mb-40">
-        <div className="container columns-2 sm:columns-2 md:columns-3 lg:columns-4">
-          {images.map((image, index) => (
-            <div key={index} className="break-inside-avoid mb-4">
-              <Image
-                className="rounded-lg"
-                src={image}
-                alt={`Project image ${index + 1}`}
-                width={300} // Set a consistent width or remove if the masonry grid is responsive
-                height={400} // Adjust based on your needs or use `layout="intrinsic"`
-                // layout="intrinsic"
-              />
-            </div>
-          ))}
+        <div className="container px-[20px]" onClick={() => setIsOpen(true)}>
+          <ColumnsPhotoAlbum
+            photos={imagesObj}
+            columns={(containerWidth) => {
+              if (containerWidth < 768) return 1;
+              if (containerWidth < 1024) return 2;
+              return 3;
+            }}
+          />
         </div>
       </div>
+      {isOpen && (
+        <div className="flex justify-center items-center h-full">
+          <Lightbox
+            open={isOpen}
+            close={() => setIsOpen(false)}
+            slides={imagesObjLightBox}
+          />
+        </div>
+      )}
     </>
   );
 };
