@@ -13,7 +13,7 @@ const homepageImages = [
 ];
 
 type BannerProps = {
-  title: string;
+  title?: string;
   src?: string[];
   disableCycle?: boolean;
 };

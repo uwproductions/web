@@ -23,17 +23,26 @@ const strokes = (
   </>
 );
 
-const Quote = () => {
+type QuoteProps = {
+  text: string;
+  showVector?: boolean;
+};
+
+const Quote = ({ text, showVector = false }: QuoteProps) => {
   return (
-    <div className="flex justify-center px-[140px] mb-40">
-      <div className="flex flex-col items-center max-w-[800px]">
+    <div className="flex justify-center mb-40">
+      <div
+        className={classNames(["flex", "flex-col", "items-center"], {
+          "max-w-[800px]": showVector,
+          "container": !showVector,
+        })}
+      >
         <p
           className={classNames([urbanist.className, "font-[600]", "text-4xl"])}
         >
-          You don’t love someone for their looks, or their clothes or their
-          fancy car, but because they sing a song only you can hear.
+          {text}
         </p>
-        {true && (
+        {showVector && (
           <>
             {strokes}
             <Button className="self-start mt-10" text="Let's work together" />
