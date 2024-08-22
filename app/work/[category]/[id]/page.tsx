@@ -35,7 +35,7 @@ const WorkDetail = ({ params: { id, category } }: WorkDetailProps) => {
       <div className="flex justify-center mb-40">
         <div className="container px-[10px] md:px-0">
           <ColumnsPhotoAlbum
-            onClick={(e) => setIsOpen(e.index)}
+            onClick={({ index }) => setIsOpen(index)}
             photos={images.map((src) => ({ src, width: 800, height: 800 }))}
             columns={(containerWidth) => {
               if (containerWidth < 768) return 2;

@@ -59,7 +59,7 @@ const OurLatestWorks = ({
             className="flex justify-center mb-[40px]"
           />
         )}
-        <div className="flex flex-wrap gap-10">
+        <div className="flex flex-wrap gap-10 justify-between">
           {activeProjects
             .slice(0, limit || activeProjects.length)
             .map((tile) => (
