@@ -17,7 +17,7 @@ interface WorkDetailProps {
 }
 
 const WorkDetail = ({ params: { id, category } }: WorkDetailProps) => {
-  const [isOpen, setIsOpen] = useState<number>(0);
+  const [openIndex, setOpenIndex] = useState<number | null>(null);
 
   const project = projects.find(
     (project) => project.href === `/work/${category}/${Number(id)}`
@@ -35,7 +35,7 @@ const WorkDetail = ({ params: { id, category } }: WorkDetailProps) => {
       <div className="flex justify-center mb-40">
         <div className="container px-[10px] md:px-0">
           <ColumnsPhotoAlbum
-            onClick={({ index }) => setIsOpen(index)}
+            onClick={({ index }) => setOpenIndex(index)}
             photos={images.map((src) => ({ src, width: 800, height: 800 }))}
             columns={(containerWidth) => {
               if (containerWidth < 768) return 2;
@@ -45,9 +45,9 @@ const WorkDetail = ({ params: { id, category } }: WorkDetailProps) => {
         </div>
       </div>
       <Lightbox
-        index={isOpen}
-        open={Boolean(isOpen)}
-        close={() => setIsOpen(0)}
+        index={openIndex ?? 0}
+        open={openIndex !== null}
+        close={() => setOpenIndex(null)}
         slides={images.map((src) => ({ src }))}
       />
     </>

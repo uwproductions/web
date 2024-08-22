@@ -7,8 +7,6 @@ const projects = [
     "src": "/assets/work/architecture/1/1.jpg",
     "bannerImages": [
       "/assets/work/architecture/1/1.jpg",
-      "/assets/work/architecture/1/10.jpg",
-      "/assets/work/architecture/1/11.jpg"
     ],
     "images": [
       "/assets/work/architecture/1/1.jpg",
@@ -39,8 +37,6 @@ const projects = [
     "src": "/assets/work/architecture/2/1.jpg",
     "bannerImages": [
       "/assets/work/architecture/2/1.jpg",
-      "/assets/work/architecture/2/10.jpg",
-      "/assets/work/architecture/2/11.jpg"
     ],
     "images": [
       "/assets/work/architecture/2/1.jpg",
@@ -81,8 +77,6 @@ const projects = [
     "src": "/assets/work/architecture/3/1.jpg",
     "bannerImages": [
       "/assets/work/architecture/3/1.jpg",
-      "/assets/work/architecture/3/10.jpg",
-      "/assets/work/architecture/3/11.jpg"
     ],
     "images": [
       "/assets/work/architecture/3/1.jpg",
@@ -120,8 +114,6 @@ const projects = [
     "src": "/assets/work/architecture/4/1.jpg",
     "bannerImages": [
       "/assets/work/architecture/4/1.jpg",
-      "/assets/work/architecture/4/2.jpg",
-      "/assets/work/architecture/4/3.jpg"
     ],
     "images": [
       "/assets/work/architecture/4/1.jpg",
@@ -146,8 +138,6 @@ const projects = [
     "src": "/assets/work/architecture/5/1.jpg",
     "bannerImages": [
       "/assets/work/architecture/5/1.jpg",
-      "/assets/work/architecture/5/10.jpg",
-      "/assets/work/architecture/5/11.jpg"
     ],
     "images": [
       "/assets/work/architecture/5/1.jpg",
@@ -179,8 +169,6 @@ const projects = [
     "src": "/assets/work/food/1/1.jpg",
     "bannerImages": [
       "/assets/work/food/1/1.jpg",
-      "/assets/work/food/1/2.jpg",
-      "/assets/work/food/1/3.jpg"
     ],
     "images": [
       "/assets/work/food/1/1.jpg",
@@ -205,8 +193,6 @@ const projects = [
     "src": "/assets/work/concert/1/1.jpg",
     "bannerImages": [
       "/assets/work/concert/1/1.jpg",
-      "/assets/work/concert/1/10.jpg",
-      "/assets/work/concert/1/11.jpg"
     ],
     "images": [
       "/assets/work/concert/1/1.jpg",
@@ -238,8 +224,6 @@ const projects = [
     "src": "/assets/work/fashion/1/1.jpg",
     "bannerImages": [
       "/assets/work/fashion/1/1.jpg",
-      "/assets/work/fashion/1/2.jpg",
-      "/assets/work/fashion/1/3.jpg"
     ],
     "images": [
       "/assets/work/fashion/1/1.jpg",
@@ -264,8 +248,6 @@ const projects = [
     "src": "/assets/work/fashion/2/1.jpg",
     "bannerImages": [
       "/assets/work/fashion/2/1.jpg",
-      "/assets/work/fashion/2/2.jpg",
-      "/assets/work/fashion/2/3.jpg"
     ],
     "images": [
       "/assets/work/fashion/2/1.jpg",

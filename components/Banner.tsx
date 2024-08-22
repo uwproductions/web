@@ -59,7 +59,7 @@ const Banner = ({ title, src, disableCycle }: BannerProps) => {
           transition={{ duration: 0.5 }}
         >
           <Image
-            className="object-cover object-top"
+            className="object-cover"
             layout="fill"
             alt="banner"
             src={image}
