@@ -29,14 +29,6 @@ const WorkDetail = ({ params: { id, category } }: WorkDetailProps) => {
 
   const { title, images, bannerImages } = project;
 
-  const imagesObj = images.map((image) => {
-    return { src: image, width: 800, height: 800 };
-  });
-
-  const imagesObjLightBox = images.map((image) => {
-    return { src: image };
-  });
-
   return (
     <>
       <Banner title={title} src={bannerImages} disableCycle />
@@ -44,7 +36,7 @@ const WorkDetail = ({ params: { id, category } }: WorkDetailProps) => {
         <div className="container px-[10px] md:px-0">
           <ColumnsPhotoAlbum
             onClick={(e) => setIsOpen(e.index)}
-            photos={imagesObj}
+            photos={images.map((src) => ({ src, width: 800, height: 800 }))}
             columns={(containerWidth) => {
               if (containerWidth < 768) return 2;
               return 3;
@@ -52,16 +44,12 @@ const WorkDetail = ({ params: { id, category } }: WorkDetailProps) => {
           />
         </div>
       </div>
-      {isOpen && (
-        <div className="flex justify-center items-center h-full">
-          <Lightbox
-            index={isOpen}
-            open={Boolean(isOpen)}
-            close={() => setIsOpen(0)}
-            slides={imagesObjLightBox}
-          />
-        </div>
-      )}
+      <Lightbox
+        index={isOpen}
+        open={Boolean(isOpen)}
+        close={() => setIsOpen(0)}
+        slides={images.map((src) => ({ src }))}
+      />
     </>
   );
 };
