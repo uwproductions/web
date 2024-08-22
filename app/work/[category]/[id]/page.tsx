@@ -19,8 +19,6 @@ interface WorkDetailProps {
 const WorkDetail = ({ params: { id, category } }: WorkDetailProps) => {
   const [isOpen, setIsOpen] = useState<boolean>(false);
 
-  console.log({ id, category });
-
   const project = projects.find(
     (project) => project.href === `/work/${category}/${Number(id)}`
   );

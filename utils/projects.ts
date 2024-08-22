@@ -1,8 +1,8 @@
 const projects = [
   {
     "id": 1,
-    "title": "Project Title 1",
-    "subtitle": "Subtitle for Project 1",
+    "title": "Green Atrium",
+    "subtitle": "Sustainable City Design",
     "href": "/work/architecture/1",
     "src": "/assets/work/architecture/1/1.jpg",
     "bannerImages": [
@@ -22,12 +22,19 @@ const projects = [
       "/assets/work/architecture/1/7.jpg",
       "/assets/work/architecture/1/8.jpg",
       "/assets/work/architecture/1/9.jpg"
-    ]
+    ],
+    "meta": {
+      "title": "Green Atrium",
+      "subtitle": "Sustainable City Design",
+      "client": "Jane & Piece Morgan",
+      "location": "Melbourne CBD, Vic",
+      "date": "April 2023"
+    }
   },
   {
     "id": 2,
-    "title": "Project Title 2",
-    "subtitle": "Subtitle for Project 2",
+    "title": "Glass Tower",
+    "subtitle": "Modern Elegance",
     "href": "/work/architecture/2",
     "src": "/assets/work/architecture/2/1.jpg",
     "bannerImages": [
@@ -57,12 +64,19 @@ const projects = [
       "/assets/work/architecture/2/7.jpg",
       "/assets/work/architecture/2/8.jpg",
       "/assets/work/architecture/2/9.jpg"
-    ]
+    ],
+    "meta": {
+      "title": "Glass Tower",
+      "subtitle": "Modern Elegance",
+      "client": "Jane & Piece Morgan",
+      "location": "Melbourne CBD, Vic",
+      "date": "April 2023"
+    }
   },
   {
     "id": 3,
-    "title": "Project Title 3",
-    "subtitle": "Subtitle for Project 3",
+    "title": "Classic Reimagined",
+    "subtitle": "Traditional Meets Modern",
     "href": "/work/architecture/3",
     "src": "/assets/work/architecture/3/1.jpg",
     "bannerImages": [
@@ -89,12 +103,19 @@ const projects = [
       "/assets/work/architecture/3/7.jpg",
       "/assets/work/architecture/3/8.jpg",
       "/assets/work/architecture/3/9.jpg"
-    ]
+    ],
+    "meta": {
+      "title": "Classic Reimagined",
+      "subtitle": "Traditional Meets Modern",
+      "client": "Jane & Piece Morgan",
+      "location": "Melbourne CBD, Vic",
+      "date": "April 2023"
+    }
   },
   {
     "id": 4,
-    "title": "Project Title 4",
-    "subtitle": "Subtitle for Project 4",
+    "title": "The Loft",
+    "subtitle": "Versatile Living Spaces",
     "href": "/work/architecture/4",
     "src": "/assets/work/architecture/4/1.jpg",
     "bannerImages": [
@@ -108,12 +129,19 @@ const projects = [
       "/assets/work/architecture/4/3.jpg",
       "/assets/work/architecture/4/4.jpg",
       "/assets/work/architecture/4/5.jpg"
-    ]
+    ],
+    "meta": {
+      "title": "The Loft",
+      "subtitle": "Versatile Living Spaces",
+      "client": "Jane & Piece Morgan",
+      "location": "Melbourne CBD, Vic",
+      "date": "April 2023"
+    }
   },
   {
     "id": 5,
-    "title": "Project Title 5",
-    "subtitle": "Subtitle for Project 5",
+    "title": "Beach House",
+    "subtitle": "Elegant Coastal Retreat",
     "href": "/work/architecture/5",
     "src": "/assets/work/architecture/5/1.jpg",
     "bannerImages": [
@@ -134,12 +162,19 @@ const projects = [
       "/assets/work/architecture/5/7.jpg",
       "/assets/work/architecture/5/8.jpg",
       "/assets/work/architecture/5/9.jpg"
-    ]
+    ],
+    "meta": {
+      "title": "Beach House",
+      "subtitle": "Elegant Coastal Retreat",
+      "client": "Jane & Piece Morgan",
+      "location": "Melbourne CBD, Vic",
+      "date": "April 2023"
+    }
   },
   {
     "id": 6,
-    "title": "Project Title 1",
-    "subtitle": "Subtitle for Project 1",
+    "title": "Artisan Bistro",
+    "subtitle": "Local Flavors, Refined",
     "href": "/work/food/1",
     "src": "/assets/work/food/1/1.jpg",
     "bannerImages": [
@@ -153,12 +188,19 @@ const projects = [
       "/assets/work/food/1/3.jpg",
       "/assets/work/food/1/4.jpg",
       "/assets/work/food/1/5.jpg"
-    ]
+    ],
+    "meta": {
+      "title": "Artisan Bistro",
+      "subtitle": "Local Flavors, Refined",
+      "client": "Jane & Piece Morgan",
+      "location": "Melbourne CBD, Vic",
+      "date": "April 2023"
+    }
   },
   {
     "id": 7,
-    "title": "Project Title 1",
-    "subtitle": "Subtitle for Project 1",
+    "title": "Grand Performance",
+    "subtitle": "Music Meets Architecture",
     "href": "/work/concert/1",
     "src": "/assets/work/concert/1/1.jpg",
     "bannerImages": [
@@ -179,12 +221,19 @@ const projects = [
       "/assets/work/concert/1/5.jpg",
       "/assets/work/concert/1/7.jpg",
       "/assets/work/concert/1/8.jpg"
-    ]
+    ],
+    "meta": {
+      "title": "Grand Performance",
+      "subtitle": "Music Meets Architecture",
+      "client": "Jane & Piece Morgan",
+      "location": "Melbourne CBD, Vic",
+      "date": "April 2023"
+    }
   },
   {
     "id": 8,
-    "title": "Project Title 1",
-    "subtitle": "Subtitle for Project 1",
+    "title": "Couture Collection",
+    "subtitle": "Classic Meets Modern",
     "href": "/work/fashion/1",
     "src": "/assets/work/fashion/1/1.jpg",
     "bannerImages": [
@@ -198,12 +247,19 @@ const projects = [
       "/assets/work/fashion/1/3.jpg",
       "/assets/work/fashion/1/4.jpg",
       "/assets/work/fashion/1/5.jpg"
-    ]
+    ],
+    "meta": {
+      "title": "Couture Collection",
+      "subtitle": "Classic Meets Modern",
+      "client": "Jane & Piece Morgan",
+      "location": "Melbourne CBD, Vic",
+      "date": "April 2023"
+    }
   },
   {
     "id": 9,
-    "title": "Project Title 2",
-    "subtitle": "Subtitle for Project 2",
+    "title": "Street Style",
+    "subtitle": "Bold Urban Fashion",
     "href": "/work/fashion/2",
     "src": "/assets/work/fashion/2/1.jpg",
     "bannerImages": [
@@ -218,7 +274,14 @@ const projects = [
       "/assets/work/fashion/2/4.jpg",
       "/assets/work/fashion/2/5.jpg",
       "/assets/work/fashion/2/6.jpg"
-    ]
+    ],
+    "meta": {
+      "title": "Street Style",
+      "subtitle": "Bold Urban Fashion",
+      "client": "Jane & Piece Morgan",
+      "location": "Melbourne CBD, Vic",
+      "date": "April 2023"
+    }
   }
 ];
 

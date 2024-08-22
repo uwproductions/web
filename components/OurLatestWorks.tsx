@@ -63,7 +63,7 @@ const OurLatestWorks = ({
           {activeProjects
             .slice(0, limit || activeProjects.length)
             .map((tile) => (
-              <Tile key={tile.title} {...tile} />
+              <Tile key={tile.href} {...tile} />
             ))}
         </div>
       </div>
