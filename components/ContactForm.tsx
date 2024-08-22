@@ -2,7 +2,7 @@
 
 import { useForm, ValidationError } from "@formspree/react";
 import classNames from "classnames";
-import { urbanist } from "../app/utils/font";
+import { urbanist } from "../utils/font";
 import Image from "next/image";
 import Button from "@/components/Button";
 // import { useEffect } from "react";

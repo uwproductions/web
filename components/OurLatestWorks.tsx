@@ -3,9 +3,9 @@
 import React, { useState } from "react";
 import Tile from "./Tile";
 import classNames from "classnames";
-import { urbanist } from "@/app/utils/font";
+import { urbanist } from "@/utils/font";
 import Tabs from "@/components/Tabs";
-import projects from "@/app/utils/projects";
+import projects from "@/utils/projects";
 
 const items = [
   { label: "all", key: "all" },

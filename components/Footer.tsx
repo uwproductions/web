@@ -3,8 +3,8 @@ import Image from "next/image";
 import Link from "next/link";
 import classNames from "classnames";
 import Logo from "./Logo";
-import navLinks from "@/app/utils/navLinks";
-import { urbanist } from "@/app/utils/font";
+import navLinks from "@/utils/navLinks";
+import { urbanist } from "@/utils/font";
 
 const Footer = () => {
   const newArr = Array(6).fill(null);

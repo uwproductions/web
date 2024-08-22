@@ -5,20 +5,25 @@ import "react-photo-album/columns.css";
 import Lightbox from "yet-another-react-lightbox";
 import "yet-another-react-lightbox/styles.css";
 
-import projects from "@/app/utils/projects";
+import projects from "@/utils/projects";
 import Banner from "@/components/Banner";
 import React, { useState } from "react";
 
 interface WorkDetailProps {
   params: {
     id: string | number;
+    category: string;
   };
 }
 
-const WorkDetail = ({ params: { id } }: WorkDetailProps) => {
+const WorkDetail = ({ params: { id, category } }: WorkDetailProps) => {
   const [isOpen, setIsOpen] = useState<boolean>(false);
 
-  const project = projects.find((project) => project.id === Number(id));
+  console.log({ id, category });
+
+  const project = projects.find(
+    (project) => project.href === `/work/${category}/${Number(id)}`
+  );
 
   if (!project) {
     return <p>Project not found.</p>;
@@ -36,7 +41,7 @@ const WorkDetail = ({ params: { id } }: WorkDetailProps) => {
 
   return (
     <>
-      <Banner title={title} src={bannerImages} />
+      <Banner title={title} src={bannerImages} disableCycle />
       <div className="flex justify-center mb-40">
         <div className="container px-[10px]" onClick={() => setIsOpen(true)}>
           <ColumnsPhotoAlbum

@@ -3,7 +3,7 @@ import { Roboto, Urbanist } from "next/font/google";
 import "./globals.css";
 import Header from "@/components/Header";
 import Footer from "@/components/Footer";
-import { roboto } from "./utils/font";
+import { roboto } from "../utils/font";
 
 export const metadata: Metadata = {
   title: "UW Productions",

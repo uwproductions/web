@@ -1,4 +1,4 @@
-import { urbanist } from "@/app/utils/font";
+import { urbanist } from "@/utils/font";
 import classNames from "classnames";
 import Image from "next/image";
 import React from "react";

@@ -4,7 +4,7 @@ import React, { useState, useEffect, useCallback } from "react";
 import { motion } from "framer-motion";
 import Image from "next/image";
 import classNames from "classnames";
-import { urbanist } from "@/app/utils/font";
+import { urbanist } from "@/utils/font";
 
 const homepageImages = [
   "/assets/banner1.jpg",
@@ -12,18 +12,26 @@ const homepageImages = [
   "/assets/banner3.jpg",
 ];
 
-const Banner = ({ title, src }: { title?: string; src?: string[] }) => {
+type BannerProps = {
+  title: string;
+  src?: string[];
+  disableCycle?: boolean;
+};
+
+const Banner = ({ title, src, disableCycle }: BannerProps) => {
   const [currentImageIndex, setCurrentImageIndex] = useState(0); // Index of the current image
 
   const images = src || homepageImages;
 
   useEffect(() => {
-    const interval = setInterval(() => {
-      setCurrentImageIndex((prevIndex) => (prevIndex + 1) % images.length);
-    }, 3000);
-    return () => {
-      clearInterval(interval);
-    };
+    if (!disableCycle) {
+      const interval = setInterval(() => {
+        setCurrentImageIndex((prevIndex) => (prevIndex + 1) % images.length);
+      }, 3000);
+      return () => {
+        clearInterval(interval);
+      };
+    }
   }, []);
 
   return (
@@ -51,7 +59,7 @@ const Banner = ({ title, src }: { title?: string; src?: string[] }) => {
           transition={{ duration: 0.5 }}
         >
           <Image
-            className="object-cover"
+            className="object-cover object-top"
             layout="fill"
             alt="banner"
             src={image}

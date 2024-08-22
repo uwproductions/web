@@ -7,7 +7,7 @@ import { motion } from "framer-motion";
 
 import { usePathname } from "next/navigation";
 import Logo from "./Logo";
-import navLinks from "@/app/utils/navLinks";
+import navLinks from "@/utils/navLinks";
 
 const Header = () => {
   const location = usePathname();
