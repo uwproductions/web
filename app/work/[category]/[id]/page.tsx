@@ -17,7 +17,7 @@ interface WorkDetailProps {
 }
 
 const WorkDetail = ({ params: { id, category } }: WorkDetailProps) => {
-  const [isOpen, setIsOpen] = useState<boolean>(false);
+  const [isOpen, setIsOpen] = useState<number>(0);
 
   const project = projects.find(
     (project) => project.href === `/work/${category}/${Number(id)}`
@@ -41,8 +41,9 @@ const WorkDetail = ({ params: { id, category } }: WorkDetailProps) => {
     <>
       <Banner title={title} src={bannerImages} disableCycle />
       <div className="flex justify-center mb-40">
-        <div className="container px-[10px] md:px-0" onClick={() => setIsOpen(true)}>
+        <div className="container px-[10px] md:px-0">
           <ColumnsPhotoAlbum
+            onClick={(e) => setIsOpen(e.index)}
             photos={imagesObj}
             columns={(containerWidth) => {
               if (containerWidth < 768) return 2;
@@ -54,8 +55,9 @@ const WorkDetail = ({ params: { id, category } }: WorkDetailProps) => {
       {isOpen && (
         <div className="flex justify-center items-center h-full">
           <Lightbox
-            open={isOpen}
-            close={() => setIsOpen(false)}
+            index={isOpen}
+            open={Boolean(isOpen)}
+            close={() => setIsOpen(0)}
             slides={imagesObjLightBox}
           />
         </div>
