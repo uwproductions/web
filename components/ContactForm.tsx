@@ -5,8 +5,6 @@ import classNames from "classnames";
 import { urbanist } from "../utils/font";
 import Image from "next/image";
 import Button from "@/components/Button";
-// import { useEffect } from "react";
-// import { useEffect, useState } from "react";
 
 const inputClass =
   "border border-black rounded-lg p-3 w-full outline-none border-opacity-50";
@@ -111,7 +109,7 @@ export default function ContactForm() {
             objectFit="cover"
             className="rounded-2xl"
             alt="form_image"
-            src={"/assets/work/concert/1/1.jpg"}
+            src={"/assets/work/architecture/3/6.jpg"}
           />
         </div>
       </div>

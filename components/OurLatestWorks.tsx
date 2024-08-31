@@ -40,8 +40,9 @@ const OurLatestWorks = ({
       <div className="container">
         <p
           className={classNames(
-            "text-[80px]",
-            "md:text-[140px]",
+            "text-[50px]",
+            "sm:text-[70px]",
+            "lg:text-[100px]",
             "font-bold",
             "font-semibold",
             "text-center",
