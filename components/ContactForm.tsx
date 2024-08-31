@@ -19,8 +19,8 @@ export default function ContactForm() {
   }
 
   return (
-    <div className="flex justify-center my-40">
-      <div className="container flex justify-between gap-20">
+    <div className="flex justify-center my-40 p-5 md:p-0">
+      <div className="container flex flex-col md:flex-row justify-between gap-20">
         <div className="flex flex-col w-full">
           <h2
             className={classNames([
@@ -105,7 +105,7 @@ export default function ContactForm() {
             <ValidationError errors={state.errors} />
           </form>
         </div>
-        <div className="relative w-full">
+        <div className="relative w-full h-[400px] md:h-auto">
           <Image
             fill
             objectFit="cover"

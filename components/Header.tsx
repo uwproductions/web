@@ -39,13 +39,13 @@ const Header = () => {
   });
 
   const links = (
-    <div className="flex gap-10 justify-center font-bold">
+    <div className="flex gap-4 sm:gap-7 md:gap-10 justify-center font-bold">
       {navLinks.map((link) => (
         <Link
           key={link.name}
           href={link.href}
           className={classNames([
-            "px-5 py-2 rounded-full transform transition hover:scale-105",
+            "px-2 py-1 md:px-5 md:py-2 rounded-full transform transition hover:scale-105",
             {
               [activeClass]: location === link.href,
             },
@@ -66,8 +66,8 @@ const Header = () => {
           animate={{ y: 0 }}
           transition={{ type: "spring", duration: 0.1 }}
         >
-          <div className="flex justify-between items-center container">
-            <Logo variant="primary" />
+          <div className="flex justify-center md:justify-between items-center container">
+            <Logo className="hidden md:block" variant="primary" />
             {links}
           </div>
         </motion.div>
@@ -76,7 +76,7 @@ const Header = () => {
           {links}
           {!hideLogo && (
             <div className="flex items-end justify-center h-[90vh] opacity-70">
-              <Logo variant="secondary" size="xl" />
+              <Logo variant="secondary" size="lg" />
             </div>
           )}
         </div>

@@ -39,7 +39,7 @@ const Footer = () => {
   );
 
   return (
-    <div className="py-8 md:py-20 px-[10px] bg-black flex justify-center">
+    <div className="py-8 md:py-20 px-5 bg-black flex justify-center">
       <div className="w-full container">
         <div className="md:flex md:pb-4 pb-8 justify-between">
           <div className="md:max-w-[30rem]">
@@ -75,7 +75,7 @@ const Footer = () => {
               ))}
             </div>
           </div>
-          <div className="flex justify-between md:items-center md:gap-8 lg:gap-16">
+          <div className="flex justify-between pt-4 md:pt-0 md:items-center md:gap-8 lg:gap-16">
             {address}
             {links}
           </div>

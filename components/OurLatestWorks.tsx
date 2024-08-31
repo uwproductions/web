@@ -40,7 +40,8 @@ const OurLatestWorks = ({
       <div className="container">
         <p
           className={classNames(
-            "text-[140px]",
+            "text-[80px]",
+            "md:text-[140px]",
             "font-bold",
             "font-semibold",
             "text-center",
@@ -59,7 +60,7 @@ const OurLatestWorks = ({
             className="flex justify-center mb-[40px]"
           />
         )}
-        <div className="flex flex-wrap gap-10 justify-between">
+        <div className="flex flex-wrap gap-8 justify-center xl:justify-between">
           {activeProjects
             .slice(0, limit || activeProjects.length)
             .map((tile) => (

@@ -11,14 +11,14 @@ const strokes = (
       height={25}
       alt="top_stroke"
       src={"/assets/quote/1.png"}
-      className="mr-[260px]"
+      className="mr-0 md:mr-[260px]"
     />
     <Image
       width={250}
       height={7.5}
       alt="bottom_stroke"
       src={"/assets/quote/2.png"}
-      className="mr-[250px]"
+      className="mr-0 md:mr-[250px]"
     />
   </>
 );
@@ -30,15 +30,20 @@ type QuoteProps = {
 
 const Quote = ({ text, showVector = false }: QuoteProps) => {
   return (
-    <div className="flex justify-center mb-40">
+    <div className="flex justify-center mx-5 md:px-10 mb-20 md:mb-40">
       <div
         className={classNames(["flex", "flex-col", "items-center"], {
           "max-w-[800px]": showVector,
-          "container": !showVector,
+          container: !showVector,
         })}
       >
         <p
-          className={classNames([urbanist.className, "font-[600]", "text-4xl"])}
+          className={classNames([
+            urbanist.className,
+            "font-[600]",
+            "md:text-4xl",
+            "text-2xl",
+          ])}
         >
           {text}
         </p>

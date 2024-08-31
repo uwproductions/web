@@ -19,11 +19,11 @@ const Tile = ({ src, title, subtitle, href }: TileProps) => {
   return (
     <Link
       href={href}
-      className="flex flex-col items-center relative h-[400px] cursor-pointer max-w-[545px] overflow-hidden"
+      className="flex flex-col items-center relative h-[400px] cursor-pointer max-w-[345px] sm:max-w-[545px] overflow-hidden"
       onMouseEnter={() => setHovered(true)}
       onMouseLeave={() => setHovered(false)}
     >
-      <div className="h-[363px] w-[545px]">
+      <div className="w-[475px] h-[300px] sm:h-[363px] sm:w-[545px]">
         <Image
           src={src}
           alt={`image_${src}`}
@@ -46,8 +46,10 @@ const Tile = ({ src, title, subtitle, href }: TileProps) => {
           "absolute",
           "z-10",
           "bottom-0",
-          "w-[490px]",
-          "h-[100px]",
+          "w-[300px]",
+          "sm:w-[490px]",
+          "h-[60px]",
+          "sm:h-[100px]",
           "bg-white",
           "rounded-2xl",
           "flex",

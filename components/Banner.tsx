@@ -35,7 +35,7 @@ const Banner = ({ title, src, disableCycle }: BannerProps) => {
   }, []);
 
   return (
-    <div className="flex h-screen p-0 m-0 relative mb-40">
+    <div className="flex h-screen p-0 m-0 relative mb-20 md:mb-40">
       <div className="absolute z-20 bottom-[30px] w-full flex justify-center">
         <motion.p
           className={classNames([

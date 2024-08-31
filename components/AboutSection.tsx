@@ -21,13 +21,16 @@ const AboutSection = ({
       className={classNames(
         "container",
         "flex",
+        "flex-col",
+        "px-5",
+        "md:px-10",
         "justify-between",
         "items-center",
         "mb-40",
         "gap-10",
         {
-          "flex-row": direction === "left",
-          "flex-row-reverse": direction === "right",
+          "md:flex-row": direction === "left",
+          "md:flex-row-reverse": direction === "right",
         }
       )}
     >
@@ -39,7 +42,13 @@ const AboutSection = ({
         </p>
         <p className={classNames([urbanist.className])}>{content}</p>
       </div>
-      <Image className="rounded-3xl" src={src} width={600} height={0} alt={src} />
+      <Image
+        className="rounded-3xl"
+        src={src}
+        width={450}
+        height={0}
+        alt={src}
+      />
     </div>
   );
 };
