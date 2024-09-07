@@ -72,7 +72,7 @@ const Header = () => {
           </div>
         </motion.div>
       ) : (
-        <div className="p-5 transition flex flex-col justify-between h-screen items-center bg-transparent text-white">
+        <div className="p-5 pb-20 transition flex flex-col justify-between h-screen items-center bg-transparent text-white">
           {links}
           {!hideLogo && (
             <div className="flex items-end justify-center opacity-70">

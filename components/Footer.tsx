@@ -25,7 +25,6 @@ const Footer = () => {
 
   const address = (
     <div className="flex flex-col gap-1 max-w-[70%] md:max-w-full text-white text-sm md:text-md font-light">
-      <p>2/14, Sector L, Aashiyana</p>
       <p>Lucknow</p>
       <p>
         <a href="tel:+917754929269">7754929269</a>
