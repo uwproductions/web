@@ -14,7 +14,7 @@ const AboutSectionData = [
   {
     heading: "Tailored pricing plans designed for you",
     content:
-      "Thank you for considering [Your Photography Business Name] for your photography needs. We look forward to working with you and capturing moments that will be cherished for generations to come. Contact us today to discuss your vision and let us create stunning imagery that tells your unique story.",
+      "Thank you for considering Ultrawide Productions for your photography needs. We look forward to working with you and capturing moments that will be cherished for generations to come. Contact us today to discuss your vision and let us create stunning imagery that tells your unique story.",
     src: "/assets/about2.jpg",
     direction: "right",
   },
