@@ -1,8 +1,11 @@
+"use client";
+
 import { urbanist } from "@/utils/font";
 import classNames from "classnames";
 import Image from "next/image";
 import React from "react";
 import Button from "./Button";
+import { useRouter } from "next/navigation";
 
 const strokes = (
   <>
@@ -29,6 +32,12 @@ type QuoteProps = {
 };
 
 const Quote = ({ text, showVector = false }: QuoteProps) => {
+  const router = useRouter();
+
+  const handleButtonClick = () => {
+    router.push("/contact");
+  };
+
   return (
     <div className="flex justify-center mx-5 md:px-10 mb-20 md:mb-40">
       <div
@@ -50,7 +59,11 @@ const Quote = ({ text, showVector = false }: QuoteProps) => {
         {showVector && (
           <>
             {strokes}
-            <Button className="self-start mt-10" text="Let's work together" />
+            <Button
+              className="self-start mt-10"
+              text="Let's work together"
+              onClick={handleButtonClick}
+            />
           </>
         )}
       </div>
