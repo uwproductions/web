@@ -55,9 +55,8 @@ const Footer = () => {
                 <a
                   key={index}
                   className={classNames([
-                    "w-full",
-                    "md:max-w-[calc(33.33%-20px)]",
-                    "h-80 md:max-h-20",
+                    "w-[calc(33.33%-20px)]",
+                    "h-20",
                     "relative",
                     "mb-2",
                     // "md:border md:border-slate-200",

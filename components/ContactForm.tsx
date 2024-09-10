@@ -103,7 +103,7 @@ export default function ContactForm() {
             <ValidationError errors={state.errors} />
           </form>
         </div>
-        <div className="relative w-full hidden sm:block h-[400px] md:h-auto">
+        <div className="relative w-full h-[400px] md:h-auto">
           <Image
             fill
             objectFit="cover"
