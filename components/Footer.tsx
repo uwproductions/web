@@ -59,7 +59,6 @@ const Footer = () => {
                     "h-20",
                     "relative",
                     "mb-2",
-                    // "md:border md:border-slate-200",
                   ])}
                   href="https://www.instagram.com/ultrawide.productions/"
                 >
